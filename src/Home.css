@@ -263,3 +263,45 @@ img {
   color: #ffffff;
 }
 
+.modal_back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* 딤처리 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal_Deam {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal_content {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.modal_x {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal_x:hover {
+  color: #000;
+}

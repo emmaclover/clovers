@@ -2,8 +2,15 @@
 import { Link } from 'react-router-dom';
 import './Home.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React, {useState} from 'react';
+import { AiOutlineClose } from 'react-icons/ai'; // x 아이콘
+import { motion, AnimatePresence } from 'framer-motion';
+
+
 
 function Home(){
+
+  const [isModalOpen, setIsModalOpen] = useState(true); // 모달 기본 표시됨
 
   return(
     <>
@@ -36,7 +43,7 @@ function Home(){
           <p><span className="name">장세희</span> / Jang sehee</p>
           <p>91. 11. 27</p>
           <p>서울시 중구 신당동</p>
-          <p>010 - 7538 -1438</p>
+          <p>010 - 8375 - 6813</p>
           <p>devsignjay7@gmail.com</p>
         </div>
 
@@ -86,6 +93,36 @@ function Home(){
         
       </div>
     </div>
+
+
+    <AnimatePresence>
+      {isModalOpen && (
+        <motion.div
+          className='modal_back'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className='modal_Deam'
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: 50, opacity: 0 }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+          >
+            <div className='modal_content'>
+              지금 보시는 페이지는 디자인관련 포트폴리오입니다.
+              <br />
+              기획PM에 관련된 포트폴리오는 ppt를 확인해주세요.
+            </div>
+            <div className="modal_x" onClick={() => setIsModalOpen(false)}>
+              <AiOutlineClose />
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+
 
 
     </>
