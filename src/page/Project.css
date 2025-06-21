@@ -1,0 +1,186 @@
+
+@font-face {
+  font-family: 'SUIT-Regular';
+  src: url('SUIT-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html , body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9fce3;
+  /* font-family:  'SUIT-Regular'; */
+}
+
+a {
+  text-decoration: none;
+}
+
+mark{
+  background-color: rgb(253, 209, 142);
+}
+
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.nav {
+  background-color: #1f1f1f;
+  width: 1400px;
+  height: 30px;
+  margin: auto;
+  margin-top: 4%;
+  border-radius: 20px 20px 0 0;
+  border: 2px solid #1f1f1f;
+
+}
+
+.wrapProject {
+  /* float: right; */
+  /* margin-right: 100px; */
+  position: relative;
+}
+
+.wrapProject a {
+  color: #1f1f1f;
+  font-weight: 900;
+  font-size: 20px;
+  padding: 10px 30px;  
+  background-color: rgb(255, 255, 255);
+  border: 3px solid #1f1f1f;
+  border-radius: 16px 16px 0 0;
+  position: absolute;  
+  bottom: -34px;
+  right: 10%;
+}
+
+.wrapProject a:nth-child(1){ /* career */
+  
+  right: 10%;
+}
+.wrapProject a:nth-child(2){ /* projects */
+  background-color: #696969;
+  color: #fff;
+  right: 18%;
+}
+.wrapProject a:nth-child(3){ /* skills */
+  right: 27%;
+}
+.wrapProject a:nth-child(4){ /* about */
+  right: 34%;
+}
+
+
+
+
+
+/* contents */
+
+.content {  
+  width: 1400px;
+  margin: auto;
+  border: 2px solid #444;
+  /* height: 80vh; */
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6%;
+}
+
+
+/* Masonry 레이아웃 */
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+  flex-wrap: wrap;
+}
+
+.items{
+  column-count: 5;
+  column-gap: 40px;
+  padding: 20px;
+  
+}
+
+.item{
+  /* background-color: #f3f3f3; */
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* padding-top: 20px; */
+}
+
+.items {
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.item {
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+}
+
+
+
+
+/* caption */
+
+.caption {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: -20px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 10px;
+  padding-top: 50px;
+  opacity: 0;
+  transition: 0.5s;
+  /* cursor: pointer; */
+}
+
+
+
+.item:hover .caption{
+  background-color: #2c2c2c;
+  color: #fff;
+  opacity: 0.9;
+}
+
+
+
+
+/* action */
+.wrapProject:hover a{  
+  background-color: #fff;
+  color: #1f1f1f;
+}
+
+.wrapProject a:hover{
+  background-color: #696969;
+  color: #ffffff;
+}
+
